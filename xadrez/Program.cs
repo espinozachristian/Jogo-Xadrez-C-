@@ -8,11 +8,15 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8, 8);
-
-            tab.colocarPeca(new Torre(tab,Cor.Preta), new Posicao(0, 0));
-
-            Tela.imprimirTabuleiro(tab);
+            try
+            {
+                PartidaXadrez partida = new PartidaXadrez();
+                Tela.imprimirTabuleiro(partida.tab);
+            }
+            catch(TabuleiroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.ReadLine();
         }

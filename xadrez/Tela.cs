@@ -23,7 +23,7 @@ namespace xadrez_console
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine(" A B C D E F G H");
+            Console.WriteLine("  A B C D E F G H");
         }
         public static void imprimirPeca(Peca peca)
         {
